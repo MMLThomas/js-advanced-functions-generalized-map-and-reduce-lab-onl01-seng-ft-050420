@@ -10,3 +10,14 @@ function map(array,func){
 }
 
 
+
+function reduce(arr, func, start=0) {
+    let rt = !!start ? start : arr[0]
+    let i = !!start ? 0 : 1
+    for ( ; i < arr.length; i++) {
+        rt = func(arr[i], rt)
+    }
+    return rt
+}
+
+
